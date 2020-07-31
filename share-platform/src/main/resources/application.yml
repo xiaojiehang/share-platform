@@ -1,0 +1,47 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.0.100/adshare?useUnicode=true&characterEncoding=utf-8&useSSL=false
+
+
+  mail:
+    host: smtp.qq.com
+    username: 3596405356@qq.com
+    password: edwsruruoymddacd
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+      default-encoding: utf-8
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+  jackson:
+    default-property-inclusion: non_null
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  messages:
+    basename: i18n.login,i18n.register #国际化
+  mvc:
+    date-format: yyyy-MM-dd #时间日期格式化
+
+
+
+server:
+  servlet:
+    context-path: /adshare
+  port: 8088
+
+mail:
+  mailFrom: 3596405356@qq.com
+  domainName: http://localhost:8088/adshare
+#debug: true
